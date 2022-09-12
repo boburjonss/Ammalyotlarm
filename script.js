@@ -58,10 +58,10 @@ center.append(divimg);
 center.append(divtext);
 
 left.innerHTML +=`
-<img src="./imgs/Vector (2).png" alt="">
+<button><img src="./imgs/Vector (2).png" alt=""></button>
 `
 right.innerHTML +=`
-<img src="./imgs/Vector (3).png" alt="">
+<button><img src="./imgs/Vector (3).png" alt=""></button>
 
 `
 divimg.innerHTML +=`
@@ -74,3 +74,79 @@ stylist chair</p>
 <button>SHOP NOW</button>
 
 `
+
+
+const section2 = document.querySelector('.section2');
+const textGlob =document.createElement('textGlob');
+const maxsulot = document.createElement('maxsulot');
+maxsulot.classList.add('maxsulot');
+textGlob.classList.add('textGlob');
+section2.append(textGlob);
+section2.append(maxsulot);
+textGlob.innerHTML +=`
+<p>Best Seller Items</p>
+
+`
+const data = [
+    {
+        img:'./imgs/lampa2.png',
+        savatcha: './imgs/Vector (5).png',
+        like: './imgs/Vector (4).png',
+        restar:'./imgs/Group (1).png',
+        nomi:'Metal Vintage Pendant',
+        narxi:'$79.00'
+    },
+    {
+        img:'./imgs/clok2.png',
+        savatcha: './imgs/Vector (5).png',
+        like: './imgs/Vector (4).png',
+        restar:'./imgs/Group (1).png',
+        nomi:'Klosh Table Clock',
+        narxi:'$99.00'
+    },
+    {
+        img:'./imgs/lampa.png',
+        savatcha: './imgs/Vector (5).png',
+        like: './imgs/Vector (4).png',
+        restar:'./imgs/Group (1).png',
+        nomi:'Arne Dining Chair',
+        narxi:'$350.00'
+    },
+    {
+        img:'./imgs/clok.png',
+        savatcha: './imgs/Vector (5).png',
+        like: './imgs/Vector (4).png',
+        restar:'./imgs/Group (1).png',
+        nomi:'Klosh Wall Clock',
+        narxi:'$80.00 - $129.000'
+    },
+]
+
+
+data.map((item)=>{
+    maxsulot.innerHTML +=`
+    
+    
+     <div class="box1">
+     <div class="btnsdv">
+     <img id="imgs" src="${item.img}" alt="">
+     <div class = "btnlar">
+     <button id="btn11"><img src="${item.restar}" alt=""></button>
+     <button id="btn12"><img src="${item.like}" alt=""></button>
+     <button id="btn13"><img src="${item.savatcha}" alt=""></button>
+     </div>
+     </div>
+     
+     
+     <p>${item.nomi}</p>
+     <span>${item.narxi}</span>
+     </div>
+    
+     
+    
+    
+    
+    
+    `
+});
+
